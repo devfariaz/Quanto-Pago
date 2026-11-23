@@ -2,6 +2,8 @@
 
 import React, { useMemo, useState } from "react";
 import { Search } from "lucide-react";
+import { AdSlot } from "@/components/AdSlot";
+import { AD_SLOTS } from "@/lib/adsense";
 
 interface VisualGlossaryProps {
   initialQuery?: string;
@@ -209,6 +211,9 @@ export function VisualGlossary({ initialQuery = "" }: VisualGlossaryProps) {
           </button>
         </div>
       )}
+
+      {/* BANNER NO GLOSSÁRIO */}
+      <AdSlot slot={AD_SLOTS.glossario} format="auto" />
     </div>
   );
 }

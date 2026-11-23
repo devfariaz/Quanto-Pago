@@ -1,2 +1,1 @@
-# Substitua a linha abaixo pelo seu ID de editor do Google AdSense apos a aprovacao:
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-8919959286703342, DIRECT, f08c47fec0942fa0

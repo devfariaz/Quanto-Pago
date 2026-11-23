@@ -23,6 +23,7 @@ import { compareAllRegimes } from "@/lib/tax/comparator";
 import { HomeLanding } from "@/components/HomeLanding";
 import { BrandIcon } from "@/components/BrandLogo";
 import { CookieConsent } from "@/components/CookieConsent";
+import { AD_SLOTS } from "@/lib/adsense";
 
 function SectionLoader() {
   return (
@@ -73,6 +74,9 @@ const PrintReport = dynamic(
 const LegalDisclaimer = dynamic(
   () => import("@/components/LegalDisclaimer").then((m) => m.LegalDisclaimer)
 );
+const AdSlot = dynamic(
+  () => import("@/components/AdSlot").then((m) => m.AdSlot)
+);
 
 type ActiveView =
   | "home"
@@ -119,9 +123,11 @@ export function TaxCalculatorApp() {
 
   const [draft, setDraft] = useState<SimulationDraft>(INITIAL_DRAFT);
 
-  // Sync Dark Mode with <html class="dark">
+  // Sync Dark Mode with <html class="dark"> (segue o tema do sistema se não houver escolha manual)
   useEffect(() => {
-    const saved = window.localStorage.getItem("aliquota-theme");
+    const saved =
+      window.localStorage.getItem("quantopago-theme") ||
+      window.localStorage.getItem("aliquota-theme");
     const prefersDark =
       saved === "dark" ||
       (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches);
@@ -133,7 +139,7 @@ export function TaxCalculatorApp() {
     setDarkMode((prev) => {
       const next = !prev;
       document.documentElement.classList.toggle("dark", next);
-      window.localStorage.setItem("aliquota-theme", next ? "dark" : "light");
+      window.localStorage.setItem("quantopago-theme", next ? "dark" : "light");
       return next;
     });
   }
@@ -421,6 +427,9 @@ export function TaxCalculatorApp() {
                   onExportPdf={handleExportPdf}
                   onSimulateAnother={() => navigateTo("wizard")}
                 />
+
+                {/* BANNER NO RESULTADO (entre o resumo e a memória de cálculo) */}
+                <AdSlot slot={AD_SLOTS.resultado} format="auto" />
 
                 <CalculationMemory
                   title={

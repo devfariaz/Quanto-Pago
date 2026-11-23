@@ -12,6 +12,8 @@ import {
   Split,
   TrendingUp,
 } from "lucide-react";
+import { AdSlot } from "@/components/AdSlot";
+import { AD_SLOTS } from "@/lib/adsense";
 
 interface EducationLibraryProps {
   initialTopicId?: string | null;
@@ -332,6 +334,9 @@ export function EducationLibrary({
               );
             })}
           </div>
+
+          {/* BANNER NA BIBLIOTECA */}
+          <AdSlot slot={AD_SLOTS.biblioteca} format="auto" />
 
           {/* INLINE SHAREABLE TIMELINE PREVIEW */}
           <section className="shadow-card rounded-[28px] border border-[#E7E5DC] bg-white p-6 sm:p-8 dark:border-slate-700 dark:bg-slate-800">

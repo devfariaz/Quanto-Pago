@@ -12,6 +12,8 @@ import {
   Sparkles,
   Split,
 } from "lucide-react";
+import { AdSlot } from "@/components/AdSlot";
+import { AD_SLOTS } from "@/lib/adsense";
 
 interface HomeLandingProps {
   onStartCalculator: () => void;
@@ -171,6 +173,9 @@ export function HomeLanding({
           </div>
         </div>
       </section>
+
+      {/* BANNER HORIZONTAL DISCRETO (HOME) */}
+      <AdSlot slot={AD_SLOTS.home} format="auto" />
 
       {/* 3 BLOCOS EDUCATIVOS */}
       <section className="space-y-6">
