@@ -44,8 +44,8 @@ export function AdSlot({
       aria-label="Publicidade"
       className={`no-print overflow-hidden rounded-2xl border border-[#E7E5DC]/80 bg-[#F3F2EC]/60 px-3 py-2 text-center dark:border-slate-800 dark:bg-slate-900/50 ${className}`}
     >
-      <span className="mb-1 block font-mono text-[10px] tracking-widest text-slate-400 uppercase dark:text-slate-500">
-        Publicidade
+      <span className="mb-1 block font-mono text-[10px] tracking-wider text-slate-400 uppercase dark:text-slate-500">
+        Publicidade · Ajuda a manter o servidor e o QuantoPago gratuito
       </span>
       <div className="min-h-[90px] w-full">
         <ins

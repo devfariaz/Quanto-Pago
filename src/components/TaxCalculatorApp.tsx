@@ -502,8 +502,8 @@ export function TaxCalculatorApp() {
               <strong className="font-serif text-sm text-[#1B4332] dark:text-emerald-400">
                 QuantoPago
               </strong>{" "}
-              © 2026 · Estimativas educativas com base nas tabelas oficiais (LC 123/2006 e LC
-              214/2025). Consulte seu contador.
+              © 2026 · Ferramenta 100% gratuita, mantida por anúncios para custear o servidor e
+              manter as tabelas (LC 123/2006 e LC 214/2025) atualizadas. Consulte seu contador.
             </p>
             <div className="flex flex-wrap items-center gap-4 font-medium text-[#1B4332] dark:text-emerald-400">
               <button

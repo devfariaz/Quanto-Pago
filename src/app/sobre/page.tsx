@@ -41,11 +41,13 @@ export default function SobrePage() {
         <section className="space-y-3 rounded-2xl border border-[#E7E5DC] bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
           <h2 className="font-serif text-xl font-semibold">Nossa Missão</h2>
           <p className="text-slate-600 dark:text-slate-300">
-            O <strong>QuantoPago</strong> nasceu para traduzir a legislação tributária brasileira
-            em números claros, visuais e auditáveis. Empreendedores, autônomos, freelancers e
-            contadores podem simular em segundos a carga tributária no Simples Nacional (Anexos I a
-            V e Fator R), MEI, Lucro Presumido, Lucro Real e os impactos da Reforma Tributária (LC
-            214/2025).
+            O <strong>QuantoPago</strong> é uma ferramenta <strong>100% gratuita e sem
+            cadastro</strong>, criada para traduzir a legislação tributária brasileira em números
+            claros, visuais e auditáveis. Empreendedores, autônomos, freelancers e contadores podem
+            simular em segundos a carga tributária no Simples Nacional (Anexos I a V e Fator R), MEI,
+            Lucro Presumido, Lucro Real e os impactos da Reforma Tributária (LC 214/2025). Os
+            anúncios exibidos no site servem para custear o servidor e manter as tabelas fiscais
+            sempre atualizadas.
           </p>
         </section>
 

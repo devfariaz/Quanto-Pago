@@ -112,6 +112,13 @@ export function HomeLanding({
               Simular Split Payment
             </button>
           </div>
+
+          <p className="text-xs text-slate-500 dark:text-slate-400">
+            <strong className="font-semibold text-[#1B4332] dark:text-emerald-400">
+              Ferramenta 100% gratuita e sem cadastro
+            </strong>{" "}
+            · Exibimos anúncios discretos para ajudar a manter o servidor e as tabelas sempre atualizadas.
+          </p>
         </div>
 
         {/* Abstract Editorial Hero Visual Card */}
