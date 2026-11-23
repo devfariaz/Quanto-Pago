@@ -1,0 +1,510 @@
+{
+  "ano": 2026,
+  "sublimiteIcmsIss": 3600000,
+  "limiteSimples": 4800000,
+  "fatorRMinimo": 0.28,
+  "mei": {
+    "salarioMinimo": 1621.0,
+    "limiteAnual": 81000.0,
+    "limiteMensalMedio": 6750.0,
+    "inssBase": 81.05,
+    "icmsFixo": 1.0,
+    "issFixo": 5.0,
+    "tetoInss2026": 8475.55,
+    "aliquotaInssProLabore": 0.11,
+    "aliquotaCppPatronal": 0.2
+  },
+  "anexos": {
+    "I": {
+      "nome": "Anexo I — Comércio",
+      "descricao": "Atividades de comércio varejista e atacadista (lojas, e-commerce, revenda de mercadorias).",
+      "cppSeparada": false,
+      "faixas": [
+        {
+          "faixa": 1,
+          "minRbt12": 0,
+          "maxRbt12": 180000,
+          "aliquotaNominal": 0.04,
+          "parcelaDeduzir": 0,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.415,
+            "ICMS": 0.34
+          }
+        },
+        {
+          "faixa": 2,
+          "minRbt12": 180000.01,
+          "maxRbt12": 360000,
+          "aliquotaNominal": 0.073,
+          "parcelaDeduzir": 5940,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.415,
+            "ICMS": 0.34
+          }
+        },
+        {
+          "faixa": 3,
+          "minRbt12": 360000.01,
+          "maxRbt12": 720000,
+          "aliquotaNominal": 0.095,
+          "parcelaDeduzir": 13860,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.42,
+            "ICMS": 0.335
+          }
+        },
+        {
+          "faixa": 4,
+          "minRbt12": 720000.01,
+          "maxRbt12": 1800000,
+          "aliquotaNominal": 0.107,
+          "parcelaDeduzir": 22500,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.42,
+            "ICMS": 0.335
+          }
+        },
+        {
+          "faixa": 5,
+          "minRbt12": 1800000.01,
+          "maxRbt12": 3600000,
+          "aliquotaNominal": 0.143,
+          "parcelaDeduzir": 87300,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1274,
+            "PIS": 0.0276,
+            "CPP": 0.42,
+            "ICMS": 0.335
+          }
+        },
+        {
+          "faixa": 6,
+          "minRbt12": 3600000.01,
+          "maxRbt12": 4800000,
+          "aliquotaNominal": 0.19,
+          "parcelaDeduzir": 378000,
+          "reparticao": {
+            "IRPJ": 0.135,
+            "CSLL": 0.1,
+            "COFINS": 0.2827,
+            "PIS": 0.0613,
+            "CPP": 0.421,
+            "ICMS": 0
+          }
+        }
+      ]
+    },
+    "II": {
+      "nome": "Anexo II — Indústria",
+      "descricao": "Atividades industriais, fabricação de produtos e beneficiamento.",
+      "cppSeparada": false,
+      "faixas": [
+        {
+          "faixa": 1,
+          "minRbt12": 0,
+          "maxRbt12": 180000,
+          "aliquotaNominal": 0.045,
+          "parcelaDeduzir": 0,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 2,
+          "minRbt12": 180000.01,
+          "maxRbt12": 360000,
+          "aliquotaNominal": 0.078,
+          "parcelaDeduzir": 5940,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 3,
+          "minRbt12": 360000.01,
+          "maxRbt12": 720000,
+          "aliquotaNominal": 0.1,
+          "parcelaDeduzir": 13860,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 4,
+          "minRbt12": 720000.01,
+          "maxRbt12": 1800000,
+          "aliquotaNominal": 0.112,
+          "parcelaDeduzir": 22500,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 5,
+          "minRbt12": 1800000.01,
+          "maxRbt12": 3600000,
+          "aliquotaNominal": 0.147,
+          "parcelaDeduzir": 85500,
+          "reparticao": {
+            "IRPJ": 0.055,
+            "CSLL": 0.035,
+            "COFINS": 0.1151,
+            "PIS": 0.0249,
+            "CPP": 0.375,
+            "IPI": 0.075,
+            "ICMS": 0.32
+          }
+        },
+        {
+          "faixa": 6,
+          "minRbt12": 3600000.01,
+          "maxRbt12": 4800000,
+          "aliquotaNominal": 0.3,
+          "parcelaDeduzir": 720000,
+          "reparticao": {
+            "IRPJ": 0.085,
+            "CSLL": 0.075,
+            "COFINS": 0.2096,
+            "PIS": 0.0454,
+            "CPP": 0.235,
+            "IPI": 0.35,
+            "ICMS": 0
+          }
+        }
+      ]
+    },
+    "III": {
+      "nome": "Anexo III — Serviços (ou Fator R ≥ 28%)",
+      "descricao": "Prestação de serviços de manutenção, instalação, locação, contabilidade, e serviços intelectuais com Fator R ≥ 28%.",
+      "cppSeparada": false,
+      "faixas": [
+        {
+          "faixa": 1,
+          "minRbt12": 0,
+          "maxRbt12": 180000,
+          "aliquotaNominal": 0.06,
+          "parcelaDeduzir": 0,
+          "reparticao": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1282,
+            "PIS": 0.0278,
+            "CPP": 0.434,
+            "ISS": 0.335
+          }
+        },
+        {
+          "faixa": 2,
+          "minRbt12": 180000.01,
+          "maxRbt12": 360000,
+          "aliquotaNominal": 0.112,
+          "parcelaDeduzir": 9360,
+          "reparticao": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1405,
+            "PIS": 0.0305,
+            "CPP": 0.434,
+            "ISS": 0.32
+          }
+        },
+        {
+          "faixa": 3,
+          "minRbt12": 360000.01,
+          "maxRbt12": 720000,
+          "aliquotaNominal": 0.135,
+          "parcelaDeduzir": 17640,
+          "reparticao": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1364,
+            "PIS": 0.0296,
+            "CPP": 0.434,
+            "ISS": 0.325
+          }
+        },
+        {
+          "faixa": 4,
+          "minRbt12": 720000.01,
+          "maxRbt12": 1800000,
+          "aliquotaNominal": 0.16,
+          "parcelaDeduzir": 35640,
+          "reparticao": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1364,
+            "PIS": 0.0296,
+            "CPP": 0.434,
+            "ISS": 0.325
+          }
+        },
+        {
+          "faixa": 5,
+          "minRbt12": 1800000.01,
+          "maxRbt12": 3600000,
+          "aliquotaNominal": 0.21,
+          "parcelaDeduzir": 125640,
+          "reparticao": {
+            "IRPJ": 0.04,
+            "CSLL": 0.035,
+            "COFINS": 0.1282,
+            "PIS": 0.0278,
+            "CPP": 0.434,
+            "ISS": 0.335
+          }
+        },
+        {
+          "faixa": 6,
+          "minRbt12": 3600000.01,
+          "maxRbt12": 4800000,
+          "aliquotaNominal": 0.33,
+          "parcelaDeduzir": 648000,
+          "reparticao": {
+            "IRPJ": 0.35,
+            "CSLL": 0.15,
+            "COFINS": 0.1603,
+            "PIS": 0.0347,
+            "CPP": 0.305,
+            "ISS": 0
+          }
+        }
+      ]
+    },
+    "IV": {
+      "nome": "Anexo IV — Serviços com CPP Separada",
+      "descricao": "Serviços de advocacia, construção civil, vigilância, limpeza e conservação. A CPP (20% sobre a folha) é paga fora do DAS.",
+      "cppSeparada": true,
+      "faixas": [
+        {
+          "faixa": 1,
+          "minRbt12": 0,
+          "maxRbt12": 180000,
+          "aliquotaNominal": 0.045,
+          "parcelaDeduzir": 0,
+          "reparticao": {
+            "IRPJ": 0.188,
+            "CSLL": 0.152,
+            "COFINS": 0.1767,
+            "PIS": 0.0383,
+            "CPP": 0,
+            "ISS": 0.445
+          }
+        },
+        {
+          "faixa": 2,
+          "minRbt12": 180000.01,
+          "maxRbt12": 360000,
+          "aliquotaNominal": 0.09,
+          "parcelaDeduzir": 8100,
+          "reparticao": {
+            "IRPJ": 0.198,
+            "CSLL": 0.152,
+            "COFINS": 0.2055,
+            "PIS": 0.0445,
+            "CPP": 0,
+            "ISS": 0.4
+          }
+        },
+        {
+          "faixa": 3,
+          "minRbt12": 360000.01,
+          "maxRbt12": 720000,
+          "aliquotaNominal": 0.102,
+          "parcelaDeduzir": 12420,
+          "reparticao": {
+            "IRPJ": 0.208,
+            "CSLL": 0.152,
+            "COFINS": 0.1973,
+            "PIS": 0.0427,
+            "CPP": 0,
+            "ISS": 0.4
+          }
+        },
+        {
+          "faixa": 4,
+          "minRbt12": 720000.01,
+          "maxRbt12": 1800000,
+          "aliquotaNominal": 0.14,
+          "parcelaDeduzir": 39780,
+          "reparticao": {
+            "IRPJ": 0.178,
+            "CSLL": 0.192,
+            "COFINS": 0.189,
+            "PIS": 0.041,
+            "CPP": 0,
+            "ISS": 0.4
+          }
+        },
+        {
+          "faixa": 5,
+          "minRbt12": 1800000.01,
+          "maxRbt12": 3600000,
+          "aliquotaNominal": 0.22,
+          "parcelaDeduzir": 183780,
+          "reparticao": {
+            "IRPJ": 0.188,
+            "CSLL": 0.192,
+            "COFINS": 0.1808,
+            "PIS": 0.0392,
+            "CPP": 0,
+            "ISS": 0.4
+          }
+        },
+        {
+          "faixa": 6,
+          "minRbt12": 3600000.01,
+          "maxRbt12": 4800000,
+          "aliquotaNominal": 0.33,
+          "parcelaDeduzir": 828000,
+          "reparticao": {
+            "IRPJ": 0.535,
+            "CSLL": 0.215,
+            "COFINS": 0.2055,
+            "PIS": 0.0445,
+            "CPP": 0,
+            "ISS": 0
+          }
+        }
+      ]
+    },
+    "V": {
+      "nome": "Anexo V — Serviços Intelectuais (Fator R < 28%)",
+      "descricao": "Serviços de natureza intelectual, técnica ou científica (TI, engenharia, medicina, consultoria) quando Fator R < 28%.",
+      "cppSeparada": false,
+      "faixas": [
+        {
+          "faixa": 1,
+          "minRbt12": 0,
+          "maxRbt12": 180000,
+          "aliquotaNominal": 0.155,
+          "parcelaDeduzir": 0,
+          "reparticao": {
+            "IRPJ": 0.25,
+            "CSLL": 0.15,
+            "COFINS": 0.141,
+            "PIS": 0.0305,
+            "CPP": 0.2885,
+            "ISS": 0.14
+          }
+        },
+        {
+          "faixa": 2,
+          "minRbt12": 180000.01,
+          "maxRbt12": 360000,
+          "aliquotaNominal": 0.18,
+          "parcelaDeduzir": 4500,
+          "reparticao": {
+            "IRPJ": 0.23,
+            "CSLL": 0.15,
+            "COFINS": 0.141,
+            "PIS": 0.0305,
+            "CPP": 0.2785,
+            "ISS": 0.17
+          }
+        },
+        {
+          "faixa": 3,
+          "minRbt12": 360000.01,
+          "maxRbt12": 720000,
+          "aliquotaNominal": 0.195,
+          "parcelaDeduzir": 9900,
+          "reparticao": {
+            "IRPJ": 0.24,
+            "CSLL": 0.15,
+            "COFINS": 0.1492,
+            "PIS": 0.0323,
+            "CPP": 0.2385,
+            "ISS": 0.19
+          }
+        },
+        {
+          "faixa": 4,
+          "minRbt12": 720000.01,
+          "maxRbt12": 1800000,
+          "aliquotaNominal": 0.205,
+          "parcelaDeduzir": 17100,
+          "reparticao": {
+            "IRPJ": 0.21,
+            "CSLL": 0.15,
+            "COFINS": 0.1574,
+            "PIS": 0.0341,
+            "CPP": 0.2385,
+            "ISS": 0.21
+          }
+        },
+        {
+          "faixa": 5,
+          "minRbt12": 1800000.01,
+          "maxRbt12": 3600000,
+          "aliquotaNominal": 0.23,
+          "parcelaDeduzir": 62100,
+          "reparticao": {
+            "IRPJ": 0.23,
+            "CSLL": 0.125,
+            "COFINS": 0.141,
+            "PIS": 0.0305,
+            "CPP": 0.2385,
+            "ISS": 0.235
+          }
+        },
+        {
+          "faixa": 6,
+          "minRbt12": 3600000.01,
+          "maxRbt12": 4800000,
+          "aliquotaNominal": 0.305,
+          "parcelaDeduzir": 540000,
+          "reparticao": {
+            "IRPJ": 0.35,
+            "CSLL": 0.155,
+            "COFINS": 0.1644,
+            "PIS": 0.0356,
+            "CPP": 0.295,
+            "ISS": 0
+          }
+        }
+      ]
+    }
+  }
+}

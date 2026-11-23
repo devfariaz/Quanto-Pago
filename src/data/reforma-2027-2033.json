@@ -1,0 +1,89 @@
+{
+  "lei": "LC 214/2025 (Reforma Tributária do Consumo — IVA Dual)",
+  "aliquotaReferenciaTotal": 0.265,
+  "aliquotaReferenciaCbs": 0.088,
+  "aliquotaReferenciaIbs": 0.177,
+  "notaContextualSplitPayment": "Em 2026 vigoram alíquotas-teste simbólicas (0,9% CBS e 0,1% IBS, compensáveis com PIS/COFINS, sem aumento de carga). O Split Payment começa em 2027 de forma facultativa/gradual junto à entrada definitiva da CBS e extinção do PIS/COFINS.",
+  "cronograma": [
+    {
+      "ano": 2026,
+      "fase": "Ano-Teste (Simbólico)",
+      "cbsAliquotaPadrao": 0.009,
+      "ibsAliquotaPadrao": 0.001,
+      "fatorPisCofins": 1.0,
+      "fatorIcmsIss": 1.0,
+      "splitPaymentStatus": "Testes piloto (sem retenção obrigatória; compensável)",
+      "observacao": "Alíquotas teste de 0,9% CBS e 0,1% IBS compensáveis com PIS/COFINS. Simples Nacional dispensado em 2026."
+    },
+    {
+      "ano": 2027,
+      "fase": "Entrada da CBS & Simples Híbrido",
+      "cbsAliquotaPadrao": 0.088,
+      "ibsAliquotaPadrao": 0.001,
+      "fatorPisCofins": 0.0,
+      "fatorIcmsIss": 1.0,
+      "splitPaymentStatus": "Facultativo / Gradual (início do Split Payment)",
+      "observacao": "PIS e COFINS extintos; CBS plena (~8,8%) em vigor; IBS simbólico (0,1%). Início da opção pelo Simples Híbrido."
+    },
+    {
+      "ano": 2028,
+      "fase": "Consolidação da CBS",
+      "cbsAliquotaPadrao": 0.088,
+      "ibsAliquotaPadrao": 0.001,
+      "fatorPisCofins": 0.0,
+      "fatorIcmsIss": 1.0,
+      "splitPaymentStatus": "Expansão para operações B2B",
+      "observacao": "Manutenção da CBS plena e IBS simbólico enquanto ICMS e ISS permanecem em 100%."
+    },
+    {
+      "ano": 2029,
+      "fase": "Transição IBS (10%)",
+      "cbsAliquotaPadrao": 0.088,
+      "ibsAliquotaPadrao": 0.0177,
+      "fatorPisCofins": 0.0,
+      "fatorIcmsIss": 0.9,
+      "splitPaymentStatus": "Ativo (CBS + parcela IBS)",
+      "observacao": "ICMS e ISS reduzidos em 10%; IBS passa para 10% da alíquota cheia."
+    },
+    {
+      "ano": 2030,
+      "fase": "Transição IBS (20%)",
+      "cbsAliquotaPadrao": 0.088,
+      "ibsAliquotaPadrao": 0.0354,
+      "fatorPisCofins": 0.0,
+      "fatorIcmsIss": 0.8,
+      "splitPaymentStatus": "Ativo (CBS + parcela IBS)",
+      "observacao": "ICMS e ISS reduzidos em 20%; IBS sobe para 20% da alíquota cheia."
+    },
+    {
+      "ano": 2031,
+      "fase": "Transição IBS (30%)",
+      "cbsAliquotaPadrao": 0.088,
+      "ibsAliquotaPadrao": 0.0531,
+      "fatorPisCofins": 0.0,
+      "fatorIcmsIss": 0.7,
+      "splitPaymentStatus": "Ativo (CBS + parcela IBS)",
+      "observacao": "ICMS e ISS reduzidos em 30%; IBS sobe para 30% da alíquota cheia."
+    },
+    {
+      "ano": 2032,
+      "fase": "Transição IBS (40%)",
+      "cbsAliquotaPadrao": 0.088,
+      "ibsAliquotaPadrao": 0.0708,
+      "fatorPisCofins": 0.0,
+      "fatorIcmsIss": 0.6,
+      "splitPaymentStatus": "Ativo (CBS + parcela IBS)",
+      "observacao": "Último ano de convivência com ICMS/ISS (60%); IBS em 40% da alíquota cheia."
+    },
+    {
+      "ano": 2033,
+      "fase": "IVA Dual Pleno (100%)",
+      "cbsAliquotaPadrao": 0.088,
+      "ibsAliquotaPadrao": 0.177,
+      "fatorPisCofins": 0.0,
+      "fatorIcmsIss": 0.0,
+      "splitPaymentStatus": "Pleno (retenção automática CBS + IBS)",
+      "observacao": "ICMS e ISS extintos. Novo sistema tributário 100% vigente (~26,5% padrão, sujeito a redutores setoriais)."
+    }
+  ]
+}
