@@ -19,6 +19,7 @@ import type {
   SimulationInput,
 } from "@/types/tax";
 import { loadCnaes, loadSimplesData } from "@/lib/data-loader";
+import { trackEvent } from "@/lib/analytics";
 import { compareAllRegimes } from "@/lib/tax/comparator";
 import { HomeLanding } from "@/components/HomeLanding";
 import { BrandIcon } from "@/components/BrandLogo";
@@ -218,6 +219,7 @@ export function TaxCalculatorApp() {
   }
 
   function navigateTo(view: ActiveView) {
+    trackEvent("navegacao_aba", { aba: view });
     setActiveView(view);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -390,7 +392,7 @@ export function TaxCalculatorApp() {
         </header>
 
         {/* MAIN CONTAINER (max-w-[1200px], base 8px) */}
-        <main className="mx-auto w-full max-w-[1200px] flex-1 px-5 py-8 md:px-8 lg:py-10">
+        <main className="mx-auto w-full max-w-[1200px] min-w-0 flex-1 px-4 py-6 sm:px-5 md:px-8 lg:py-10">
           {activeView === "home" && (
             <HomeLanding
               onStartCalculator={() => navigateTo("wizard")}
@@ -407,7 +409,15 @@ export function TaxCalculatorApp() {
                 selectedEstimate={selectedEstimate}
                 onChangeDraft={setDraft}
                 onSelectCnae={handleSelectCnae}
-                onFinish={() => navigateTo("resultado")}
+                onFinish={() => {
+                  trackEvent("resultado_visualizado", {
+                    regime: draft.regimeSelecionado ?? "nao_informado",
+                    cnae: draft.cnae?.code ?? "nao_informado",
+                    anexo: draft.cnae?.anexo ?? "nao_informado",
+                    categoria: draft.cnae?.category ?? "nao_informado",
+                  });
+                  navigateTo("resultado");
+                }}
                 onOpenGlossary={handleOpenGlossary}
               />
             ) : (
@@ -416,7 +426,7 @@ export function TaxCalculatorApp() {
 
           {activeView === "resultado" &&
             (simulationInput && computed && selectedEstimate ? (
-              <div className="space-y-8">
+              <div className="min-w-0 space-y-8">
                 <ResultsSummary
                   input={simulationInput}
                   mei={computed.mei}

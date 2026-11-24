@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -19,6 +19,7 @@ import type {
   TaxRegime,
 } from "@/types/tax";
 import { formatCurrency, formatPercent } from "@/lib/format";
+import { trackEvent } from "@/lib/analytics";
 import { CnaeAutocomplete } from "@/components/CnaeAutocomplete";
 import { CurrencyInput } from "@/components/CurrencyInput";
 import { EditorialTooltip } from "@/components/EditorialTooltip";
@@ -89,6 +90,10 @@ export function CalculatorWizard({
   onOpenGlossary,
 }: CalculatorWizardProps) {
   const [step, setStep] = useState<number>(1);
+
+  useEffect(() => {
+    trackEvent("wizard_passo", { passo: step });
+  }, [step]);
   const [showAdvanced, setShowAdvanced] = useState(false);
 
   const isMei = draft.regimeSelecionado === "MEI";

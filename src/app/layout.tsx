@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { GA_MEASUREMENT_ID, IS_GTM_CONTAINER } from "@/lib/analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -61,6 +62,25 @@ export default function RootLayout({
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
             crossOrigin="anonymous"
           />
+        )}
+        {GA_MEASUREMENT_ID && (
+          <>
+            <script
+              async
+              src={
+                IS_GTM_CONTAINER
+                  ? `https://www.googletagmanager.com/gtm.js?id=${GA_MEASUREMENT_ID}`
+                  : `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
+              }
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());${
+                  IS_GTM_CONTAINER ? "" : ` gtag('config', '${GA_MEASUREMENT_ID}');`
+                }`,
+              }}
+            />
+          </>
         )}
       </head>
       <body className="min-h-screen font-sans antialiased selection:bg-emerald-200/70 selection:text-emerald-950 dark:selection:bg-emerald-800 dark:selection:text-emerald-50">

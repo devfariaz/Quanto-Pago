@@ -130,9 +130,9 @@ export function ResultsSummary({
 
   return (
     <>
-      <section aria-label="Resumo do cálculo tributário" className="animate-fade-slide space-y-6">
+      <section aria-label="Resumo do cálculo tributário" className="animate-fade-slide min-w-0 space-y-6">
         {/* 1. HERO DE RESULTADO INSTAGRAMÁVEL */}
-        <div className="hero-forest-gradient relative overflow-hidden rounded-[28px] p-6 text-white shadow-xl sm:p-9">
+        <div className="hero-forest-gradient relative overflow-hidden rounded-[24px] p-5 text-white shadow-xl sm:rounded-[28px] sm:p-9">
           {/* Subtle confetti dots when best regime */}
           {showConfetti && (
             <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -150,20 +150,20 @@ export function ResultsSummary({
             </div>
           )}
 
-          <div className="relative flex flex-col justify-between gap-7 lg:flex-row lg:items-center">
-            <div className="space-y-3">
-              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200/20 bg-white/10 px-3.5 py-1 font-mono text-xs font-medium text-emerald-200">
-                <Sparkles className="h-3.5 w-3.5 text-amber-300" strokeWidth={1.75} />
-                {tagLabel}
+          <div className="relative flex flex-col justify-between gap-6 lg:flex-row lg:items-center lg:gap-7">
+            <div className="min-w-0 space-y-3">
+              <div className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-2xl border border-emerald-200/20 bg-white/10 px-3 py-1.5 font-mono text-[11px] font-medium text-emerald-200 sm:rounded-full sm:px-3.5 sm:py-1 sm:text-xs">
+                <Sparkles className="h-3.5 w-3.5 shrink-0 text-amber-300" strokeWidth={1.75} />
+                <span className="break-words">{tagLabel}</span>
               </div>
 
-              <p className="font-mono text-[11px] font-medium tracking-widest text-slate-300 uppercase">
+              <p className="font-mono text-[11px] font-medium tracking-widest text-slate-300 uppercase break-words">
                 SUA ALÍQUOTA EFETIVA · {selectedEstimate.nome.toUpperCase()}
               </p>
 
               {selectedEstimate.elegivel ? (
                 <>
-                  <p className="font-serif text-6xl leading-[0.95] font-bold tracking-[-0.03em] text-[#FAFAF7] tabular-nums sm:text-[80px]">
+                  <p className="font-serif text-5xl leading-[0.95] font-bold tracking-[-0.03em] text-[#FAFAF7] tabular-nums sm:text-[80px]">
                     {formatPercent(animatedRate)}
                   </p>
                   <p className="text-lg font-semibold text-amber-300 tabular-nums sm:text-2xl">
@@ -230,7 +230,7 @@ export function ResultsSummary({
         {/* 2. GRID CENTRAL: DONUT DO DAS + MINI COMPARADOR */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {/* DONUT CHART CARD */}
-          <div className="shadow-card rounded-[24px] border border-[#E7E5DC] bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+          <div className="shadow-card min-w-0 rounded-[24px] border border-[#E7E5DC] bg-white p-5 sm:p-6 dark:border-slate-700 dark:bg-slate-800">
             <h2 className="font-serif text-xl font-semibold text-[#111827] dark:text-slate-50">
               Composição do seu imposto
             </h2>
@@ -279,7 +279,7 @@ export function ResultsSummary({
                 </div>
 
                 {/* Tabular Legend */}
-                <ul className="w-full space-y-2 text-xs">
+                <ul className="w-full min-w-0 space-y-2 text-xs">
                   {breakdown.map((item, idx) => {
                     const share = totalBreakdown > 0 ? item.valor / totalBreakdown : 0;
                     const active = hoveredSlice === idx;
@@ -288,13 +288,13 @@ export function ResultsSummary({
                         key={item.nome}
                         onMouseEnter={() => setHoveredSlice(idx)}
                         onMouseLeave={() => setHoveredSlice(null)}
-                        className={`flex cursor-pointer items-center justify-between gap-2 rounded-xl px-2.5 py-1.5 transition ${
+                        className={`flex min-w-0 cursor-pointer items-center justify-between gap-2 rounded-xl px-2.5 py-1.5 transition ${
                           active
                             ? "bg-[#F3F2EC] dark:bg-slate-700"
                             : "hover:bg-[#FAFAF7] dark:hover:bg-slate-700/50"
                         }`}
                       >
-                        <div className="flex items-center gap-2 truncate">
+                        <div className="flex min-w-0 flex-1 items-center gap-2">
                           <span
                             className="h-2.5 w-2.5 shrink-0 rounded-full"
                             style={{ backgroundColor: DONUT_COLORS[idx % DONUT_COLORS.length] }}
@@ -303,7 +303,7 @@ export function ResultsSummary({
                             {item.nome}
                           </span>
                         </div>
-                        <div className="flex shrink-0 items-center gap-3 tabular-nums">
+                        <div className="flex shrink-0 items-center gap-2 tabular-nums sm:gap-3">
                           <span className="font-mono text-slate-500 dark:text-slate-400">
                             {formatPercent(share, 1)}
                           </span>
@@ -324,7 +324,7 @@ export function ResultsSummary({
           </div>
 
           {/* MINI COMPARADOR + SELO TROFÉU */}
-          <div className="shadow-card flex flex-col justify-between rounded-[24px] border border-[#E7E5DC] bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
+          <div className="shadow-card flex min-w-0 flex-col justify-between rounded-[24px] border border-[#E7E5DC] bg-white p-5 sm:p-6 dark:border-slate-700 dark:bg-slate-800">
             <div>
               <h2 className="font-serif text-xl font-semibold text-[#111827] dark:text-slate-50">
                 Comparador rápido de regimes

@@ -49,6 +49,12 @@
   --color-border-strong: #475569;
 }
 
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 body {
   background-color: var(--color-bg-canvas);
   color: var(--color-text-primary);

@@ -14,7 +14,7 @@ export function CalculationMemory({ title, steps }: CalculationMemoryProps) {
   return (
     <section
       aria-label="Memória de cálculo"
-      className="print-break-inside-avoid shadow-card rounded-[24px] border border-[#E7E5DC] bg-white p-5 sm:p-6 dark:border-slate-700 dark:bg-slate-800"
+      className="print-break-inside-avoid shadow-card min-w-0 rounded-[24px] border border-[#E7E5DC] bg-white p-5 sm:p-6 dark:border-slate-700 dark:bg-slate-800"
     >
       <div className="flex items-center justify-between gap-2">
         <div>
@@ -40,21 +40,21 @@ export function CalculationMemory({ title, steps }: CalculationMemoryProps) {
           {steps.map((step, index) => (
             <li
               key={index}
-              className="rounded-2xl border border-[#E7E5DC]/80 bg-[#FAFAF7] p-4 dark:border-slate-700 dark:bg-slate-900/60"
+              className="min-w-0 rounded-2xl border border-[#E7E5DC]/80 bg-[#FAFAF7] p-4 dark:border-slate-700 dark:bg-slate-900/60"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <span className="text-xs font-semibold text-slate-800 dark:text-slate-100">
                   {step.titulo}
                 </span>
-                <span className="rounded-lg bg-[#ECFDF5] px-2.5 py-0.5 font-mono text-xs font-bold text-[#1B4332] dark:bg-emerald-950 dark:text-emerald-300">
+                <span className="max-w-full rounded-lg bg-[#ECFDF5] px-2.5 py-0.5 font-mono text-xs font-bold break-words text-[#1B4332] dark:bg-emerald-950 dark:text-emerald-300">
                   {step.resultado}
                 </span>
               </div>
-              <p className="mt-1.5 font-mono text-[11px] break-words text-slate-600 dark:text-slate-300">
+              <p className="mt-1.5 font-mono text-[11px] break-words [overflow-wrap:anywhere] text-slate-600 dark:text-slate-300">
                 {step.formula}
               </p>
               {step.detalhe && (
-                <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                <p className="mt-1 text-xs break-words text-slate-500 dark:text-slate-400">
                   {step.detalhe}
                 </p>
               )}
