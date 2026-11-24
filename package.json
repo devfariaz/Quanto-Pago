@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test:tax": "node scripts/verify-tax.mjs"
+    "test:tax": "node scripts/verify-tax.mjs",
+    "generate:cnaes": "node scripts/generate-cnaes.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.78.0",
